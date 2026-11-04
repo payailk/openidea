@@ -1,8 +1,8 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "OpenIDEA",
+  "productName": "OpenIDEA-Flutter",
   "version": "0.1.36",
-  "identifier": "ai.l0ng.openidea",
+  "identifier": "ai.l0ng.openidea.flutter",
   "build": {
     "beforeDevCommand": "pnpm dev",
     "devUrl": "http://localhost:1420",
@@ -31,8 +31,8 @@
   },
   "bundle": {
     "active": true,
-    "targets": "all",
-    "createUpdaterArtifacts": true,
+    "targets": ["app"],
+    "createUpdaterArtifacts": false,
     "icon": ["icons/32x32.png", "icons/128x128.png", "icons/128x128@2x.png", "icons/icon.icns", "icons/icon.ico"],
     "category": "DeveloperTool",
     "copyright": "Copyright © 2026 OpenIDEA contributors",
