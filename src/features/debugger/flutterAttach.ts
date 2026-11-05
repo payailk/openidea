@@ -39,6 +39,8 @@ export const flutterAttachType: RunConfigTypeContribution = {
   icon: "attach-to-process",
   description: "Attach the debugger to a Flutter app that is already running on a device",
   debugOnly: true,
+  // `flutter attach` runs in the project's directory (pubspec.yaml, .dart_tool).
+  projectDirectory: true,
   debugAdapter: "dart",
   defaults: { request: "attach" },
   fields: [

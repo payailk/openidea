@@ -714,6 +714,20 @@ describe("debug-only types (Remote JVM Debug)", () => {
     expect(screen.queryByLabelText("Command")).toBeNull();
   });
 
+  it("keep the working directory when the adapter runs in the project", async () => {
+    const attach = { ...remote, id: "test-attach", label: "Test Attach", projectDirectory: true };
+    const disposeAttach = registerRunConfigType(attach);
+    try {
+      useRun.setState({ configs: [], loaded: true, editorOpen: true });
+      render(<EditConfigsOverlay />);
+      fireEvent.click(screen.getByRole("button", { name: "Add New Configuration" }));
+      fireEvent.click(await screen.findByText("Test Attach"));
+      expect(screen.getByLabelText("Working directory")).toBeTruthy();
+    } finally {
+      disposeAttach();
+    }
+  });
+
   it("are valid without a command, get the type's adapter and are not run", async () => {
     const c = newConfigOfType(remote, []);
     expect(c.debugAdapter).toBe("java-debug");

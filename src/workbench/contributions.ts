@@ -1160,6 +1160,11 @@ export interface RunConfigTypeContribution {
    * (Remote JVM Debug, Go Remote). `commandLine` returns null.
    */
   debugOnly?: boolean;
+  /**
+   * A `debugOnly` type whose adapter still runs in the project's directory
+   * (Flutter Attach): keep the Working directory and environment fields.
+   */
+  projectDirectory?: boolean;
   /** `RunConfig.debugAdapter` of a new configuration. */
   debugAdapter?: string;
 }

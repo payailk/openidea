@@ -488,7 +488,7 @@ export function ConfigForm({ config, all, type, errors, template, onChange, modi
         </>
       )}
 
-      {!noProcess && (
+      {(!noProcess || type?.projectDirectory) && (
         <>
           {!type?.ownsWorkingDirectory && (
             <Field label="Working directory" error={errors.cwd}>
