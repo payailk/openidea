@@ -6333,5 +6333,11 @@
   "Choose Mapping Target": "选择映射目标",
   "Plugin navigation indexing incomplete": "插件导航索引未完成",
   "Choose Declaration": "选择声明",
-  "Go to mapping: {target}": "跳转到映射：{target}"
+  "Go to mapping: {target}": "跳转到映射：{target}",
+  "Flutter Attach": "Flutter 附加调试",
+  "Attach the debugger to a Flutter app that is already running on a device": "附加到设备上正在运行的 Flutter 应用",
+  "Any connected device": "任意已连接设备",
+  "Connected through adb, like the Logcat tool window. Any connected device lets flutter attach pick the only one.": "通过 adb 连接，与 Logcat 工具窗口一致。选择“任意已连接设备”时，flutter attach 会自行选中唯一的一台设备。",
+  "VM Service URI": "VM Service 地址",
+  "Leave empty to let flutter attach find the running app; a URI pins the endpoint it attaches to.": "留空时由 flutter attach 自行查找正在运行的应用；填写后会固定附加的端点。"
 }

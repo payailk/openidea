@@ -37,6 +37,7 @@ import {
 } from "./state";
 import { DebuggerOverlays } from "./ui/Overlays";
 import { REMOTE_TYPES } from "./remote";
+import { flutterAttachType } from "./flutterAttach";
 
 export function activate(): () => void {
   useDebugRunSessions.setState({
@@ -52,6 +53,8 @@ export function activate(): () => void {
     registerDebugActions(),
     // Remote JVM Debug, Go Remote, …: Run/Debug Configurations › Add New Configuration.
     ...REMOTE_TYPES.map(registerRunConfigType),
+    // Flutter Attach: debugger only, the app is installed by its own Gradle build.
+    registerRunConfigType(flutterAttachType),
     registerToolWindow({
       id: "debug",
       title: "Debug",
