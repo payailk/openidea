@@ -6,6 +6,7 @@ import { useTx } from "@/platform/i18n";
 import { shortcutLabel } from "@/platform/keymap";
 import { runExecutors, useRunExecutors, useDebugRunSessions } from "@/workbench/contributions";
 import { configIcon } from "./configs";
+import { DevicePicker } from "./DevicePicker";
 import { useRemoteLabel } from "./remote";
 import { CURRENT_FILE, useRun } from "./store";
 import { compoundTargets, selectedTarget } from "./sessionTargets";
@@ -79,6 +80,7 @@ export function RunWidget() {
         </span>
         <Icon name="chevron-down" size={14} className={styles.widgetChevron} />
       </BarButton>
+      <DevicePicker />
       <span className={styles.widgetButtons}>
         {active ? (
           <>

@@ -251,6 +251,10 @@
   height: 30px;
   border-radius: 6px;
 }
+/* The device chooser: narrower than the configuration's, it only names a phone. */
+.widgetDevice {
+  max-width: 170px;
+}
 .widgetButton {
   width: 30px;
   height: 30px;
